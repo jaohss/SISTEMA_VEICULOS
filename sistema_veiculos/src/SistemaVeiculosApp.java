@@ -12,6 +12,7 @@ public class SistemaVeiculosApp{
         b1.setMaterial("Aço");
         b1.setModelo("Super mega bike");
         b1.setQntd_marchas(2);
+        b1.setAmortecedor("Bom");
         
         //Dados do Skate
         Skate s1 = new Skate();
@@ -60,6 +61,17 @@ public class SistemaVeiculosApp{
         System.out.println(b1.descricao());
         System.out.println(car.descricao());
         System.out.println(m1.descricao());
+
+        // Saída de dados - exibição dos comandos INSERT
+        System.out.println("\nComandos SQL:");
+        System.out.println(c1.gerarComandoInsert());
+        System.out.println(s1.gerarComandoInsert());
+        System.out.println(b1.gerarComandoInsert());
+        System.out.println(car.gerarComandoInsert());
+        System.out.println(m1.gerarComandoInsert());
+        
+
+
         }
 
         //Exibição da mensagem de erro em caso de falha

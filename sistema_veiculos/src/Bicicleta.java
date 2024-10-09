@@ -71,6 +71,11 @@ public class Bicicleta extends Veiculos {
     //Método string que retorna as informações da superclasse adicionando as informações dos atributos específicos
    @Override
     public String descricao(){
-        return "\ndados da bicicleta: "+super.descricao() + "\nQuantidade de marchas: "+getQntd_marchas();
+        return "\ndados da bicicleta: "+super.descricao() + "\nQuantidade de marchas: "+getQntd_marchas() + "\nAmortecedor: "+getAmortecedor();
+    }
+
+    @Override
+    public String gerarComandoInsert() {
+        return "\nINSERT INTO Bicicleta (modelo, cor, ano_fabri, marca, material, qntd_marchas, amortecedor) VALUES ('" + getModelo() + "', '" + getCor() + "', '" + getAno_fabri() + "', '" + marca + "', " + material + "', "+qntd_marchas+ "', "+ amortecedor+");";
     }
 }

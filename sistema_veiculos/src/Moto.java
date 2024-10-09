@@ -48,5 +48,11 @@ public class Moto extends Automotores {
         return "\nDados da Moto: "+super.descricao() + "\nCilindradas: "+getCilindrada()+" cc" + "\n"+
         "Torque: "+getTorque() +" N.m";
     }
+
+    @Override
+    public String gerarComandoInsert() {
+        return "\nINSERT INTO Caminhao (modelo, cor, ano_fabri, montadora, kilometragem, qntd_passageiros, tipo_airbag, tipo_freio) VALUES ('" + getModelo() + "', '" + getCor() + "', '" + getAno_fabri() + "', '" + getMontadora() + "', " + getKilometragem() + ", " + cilindrada + ", " + torque + ");";
+    
+    }
     
 }

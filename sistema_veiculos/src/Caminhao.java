@@ -45,5 +45,12 @@ public class Caminhao extends Automotores {
         return "\nDados do caminhao: "+super.descricao() + "\nQuantidade de eixos: "+ getQntd_eixo() + "\n" +
         "Peso bruto: "+getPeso_bruto()+"(T)";
     }
+
+    @Override
+    public String gerarComandoInsert() {
+        return "\nINSERT INTO Caminhao (modelo, cor, ano_fabri, montadora, kilometragem, qntd_eixo, peso_bruto) VALUES ('" +
+                getModelo() + "', '" + getCor() + "', '" + getAno_fabri() + "', '" + 
+                getMontadora() + "', " + getKilometragem() + ", " + qntd_eixo + ", " + peso_bruto + ");";
     
+    }
 }

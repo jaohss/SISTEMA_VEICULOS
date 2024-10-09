@@ -46,4 +46,9 @@ public class Automotores extends Veiculos {
         return super.descricao() + "\nMontadora: "+getMontadora() + "\n"+
         "Kilometragem: "+getKilometragem() +"(km)";
     }
+
+    @Override
+    public String gerarComandoInsert() {
+        return "\nINSERT INTO Automotores (modelo, cor, ano_fabri, montadora, kilometragem) VALUES ('" + getModelo() + "', '" + getCor() + "', '" + getAno_fabri() + "', '" + montadora + "', " + kilometragem + ");";
+    }
 }

@@ -44,5 +44,9 @@ public class Skate extends Veiculos {
         return "\nDados do skate: "+super.descricao() + "\nMarca: " + getMarca() + "\n"+
         "Tipo de roda: "+getTipo_roda();
     }
+    @Override
+    public String gerarComandoInsert() {
+        return "\nINSERT INTO Skate (modelo, cor, ano_fabri, marca, tipo de roda) VALUES ('" + getModelo() + "', '" + getCor() + "', '" + getAno_fabri() + "', '" + marca + "', " + tipo_roda + ");";
+    }
     
 }

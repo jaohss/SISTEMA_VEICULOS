@@ -62,6 +62,11 @@ public class Veiculos {
         "Cor: "+getCor() +"\n" +
         "Ano de fabricação: " + getAno_fabri();
     }
+
+    public String gerarComandoInsert() {
+        return "\nINSERT INTO Veiculos (modelo, cor, ano_fabri) VALUES ('" +
+                modelo + "', '" + cor + "', '" + ano_fabri + "');";
+    }
 }
 
 

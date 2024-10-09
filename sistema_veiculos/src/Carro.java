@@ -57,5 +57,11 @@ public class Carro extends Automotores{
     public String descricao(){
         return "\nDados do carro: "+super.descricao() +"\nQuantidade de passageiros máxima: "+getQntd_passageiros() + "\nTipo de Airbag: "+getTipo_airbag()+ "\nTipo de freio: "+getTipo_freio();
     }
+
+    @Override
+    public String gerarComandoInsert() {
+        return "\nINSERT INTO Caminhao (modelo, cor, ano_fabri, montadora, kilometragem, qntd_passageiros, tipo_airbag, tipo_freio) VALUES ('" + getModelo() + "', '" + getCor() + "', '" + getAno_fabri() + "', '" + getMontadora() + "', " + getKilometragem() + ", " + qntd_passageiros + ", " + tipo_airbag + "', " + tipo_freio + ");";
+    
+    }
     
 }
